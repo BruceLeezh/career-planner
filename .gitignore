@@ -1,0 +1,52 @@
+# ===== 依赖与构建产物 =====
+node_modules/
+dist/
+.tmp-build/
+.frame-tmp/
+__pycache__/
+*.pyc
+
+# ===== 本地密钥与配置（模板：02-后端源码/.env.example）=====
+.env
+.env.*
+!.env.example
+
+# ===== 数据库与备份（含本地账号数据，可用 npm run seed 重建）=====
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.bak
+*.bak-*
+
+# ===== 日志与临时文件 =====
+*.log
+logs/
+uploads/
+.DS_Store
+Thumbs.db
+
+# ===== 含真实姓名/学工号与大体积媒体的提交物，不纳入代码仓库 =====
+04-提交材料/
+05-上架包/
+07-技能包/
+高级赛道.zip
+
+# ===== 构建缓存与截图产物 =====
+.tmp-esb/
+.tmp-esbuild/
+static-dist/*.png
+
+# ===== 空数据库占位（由 npm run seed 重建）=====
+*.db
+*.db-shm
+*.db-wal
+
+# ===== 静态构建工程副本与数据快照（源码在 01-前端源码，可用 05-工具脚本 重新导出）=====
+static-dist/frontend/
+static-dist/data.js
+
+# ===== 培养方案抓取中间数据（原始 PDF 文本 / 解析结果，体积大，可由脚本重跑）=====
+05-工具脚本/*.txt
+05-工具脚本/*.json
+05-工具脚本/_merged.sqlite*
+05-工具脚本/_debug*
